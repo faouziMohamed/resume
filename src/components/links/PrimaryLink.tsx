@@ -3,14 +3,14 @@ import { forwardRef } from 'react';
 
 import clsxm from '@/lib/clsxm';
 
-import UnstyledLink, {
-  UnstyledLinkProps,
-} from '@/components/links/UnstyledLink';
+import UnStyledLink, {
+  UnStyledLinkProps,
+} from '@/components/links/UnStyledLink';
 
-const PrimaryLink = forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
+const PrimaryLink = forwardRef<HTMLAnchorElement, UnStyledLinkProps>(
   ({ className, children, ...rest }, ref) => {
     return (
-      <UnstyledLink
+      <UnStyledLink
         ref={ref}
         {...rest}
         className={clsxm(
@@ -21,7 +21,7 @@ const PrimaryLink = forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
         )}
       >
         {children}
-      </UnstyledLink>
+      </UnStyledLink>
     );
   },
 );

@@ -60,7 +60,7 @@ export const generateUniqueId = (str: string, size = 8): IHash => {
 };
 
 /**
- * Generate an ID {@link generateUniqueId} prefixed by KT standing for KENITRA
+ * Generate an ID {@Link generateUniqueId} prefixed by KT standing for KENITRA
  *
  * Exemple:
  *

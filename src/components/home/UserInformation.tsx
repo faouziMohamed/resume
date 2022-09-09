@@ -8,7 +8,7 @@ import {
   MdOutlineLocationOn,
 } from 'react-icons/md';
 
-import UnstyledLink from '@/components/links/UnstyledLink';
+import UnStyledLink from '@/components/links/UnStyledLink';
 
 import { IUserData } from '@/@types/data';
 
@@ -37,7 +37,7 @@ export default function UserInformation({ data }: { data: IUserData }) {
       <Typography variant='h1' className='text-3xl font-bold'>
         {FirstName} {LastName}
       </Typography>
-      <Typography variant='h2' className='max-w-xs text-lg'>
+      <Typography variant='h2' className='text-lg'>
         {Profession}
       </Typography>
       <Box className='flex w-full flex-col items-center justify-center msm:items-start'>
@@ -49,14 +49,14 @@ export default function UserInformation({ data }: { data: IUserData }) {
             </Typography>
           </Box>
           {userdata.map((value) => (
-            <UnstyledLink
+            <UnStyledLink
               className={`flex items-center gap-2  px-1 text-xs font-[500] `}
               key={value.Title}
               href={`${value?.Prefix || ''}${value.Link}`}
             >
               <value.Icon />
               <Typography>{value.Title}</Typography>
-            </UnstyledLink>
+            </UnStyledLink>
           ))}
         </Box>
       </Box>

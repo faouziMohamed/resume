@@ -4,7 +4,7 @@ import { ComponentPropsWithRef, forwardRef, ReactNode } from 'react';
 
 import clsxm from '@/lib/clsxm';
 
-export type UnstyledLinkProps = {
+export type UnStyledLinkProps = {
   href: string;
   children: ReactNode;
   openNewTab?: boolean;
@@ -12,7 +12,7 @@ export type UnstyledLinkProps = {
   nextLinkProps?: Omit<LinkProps, 'href'>;
 } & ComponentPropsWithRef<'a'>;
 
-const UnstyledLink = forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
+const UnStyledLink = forwardRef<HTMLAnchorElement, UnStyledLinkProps>(
   ({ children, href, openNewTab, className, nextLinkProps, ...rest }, ref) => {
     const isNewTab =
       openNewTab !== undefined
@@ -44,6 +44,6 @@ const UnstyledLink = forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
   },
 );
 
-UnstyledLink.displayName = 'UnstyledLink';
+UnStyledLink.displayName = 'UnStyledLink';
 
-export default UnstyledLink;
+export default UnStyledLink;

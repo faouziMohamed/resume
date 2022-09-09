@@ -112,7 +112,7 @@ export default function Seo(props: SeoProps) {
     : meta.title;
 
   // Use siteName if there is templateTitle
-  // but show full title if there is none
+  // but show full sectionName if there is none
   meta.image = openGraph({
     description: meta.description,
     siteName: props.templateTitle ? meta.siteName : meta.title,
@@ -132,7 +132,7 @@ export default function Seo(props: SeoProps) {
       <meta property='og:type' content={meta.type} />
       <meta property='og:site_name' content={meta.siteName} />
       <meta property='og:description' content={meta.description} />
-      <meta property='og:title' content={meta.title} />
+      <meta property='og:sectionName' content={meta.title} />
       <meta name='image' property='og:image' content={meta.image} />
       {/* Twitter */}
       <meta name='twitter:card' content='summary_large_image' />

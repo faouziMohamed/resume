@@ -8,8 +8,6 @@ import {
 import { ReactNode } from 'react';
 import { RiMagicFill } from 'react-icons/ri';
 
-import Footer from '@/components/layout/Footer';
-
 import Header from './Header';
 
 interface LayoutProps {
@@ -21,11 +19,11 @@ export default function Layout({ children, className = '' }: LayoutProps) {
   const isBuilding = process.env.NEXT_PUBLIC_ISBUILDING === 'true';
   return (
     <MainContainer className='z-10 flex w-full flex-col bg-app p-0'>
-      {isBuilding && <UnderConstructionBanner />}
+      {!isBuilding && <UnderConstructionBanner />}
       <SiteContent className={`p-0 ${className}`}>
         <Header />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </SiteContent>
     </MainContainer>
   );

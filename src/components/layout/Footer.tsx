@@ -1,28 +1,29 @@
 import { Box, Box as FooterSection, Stack, Typography } from '@mui/material';
 
-import devData from '@/data/dev-data.json';
+import socialData from '@/data/dev-data';
 
-import { DevDataTypes, SVGImageData } from '@/@types/data';
+import { SVGImageData } from '@/@types/data';
 
 import Facebook from '~/icons/facebook.svg';
 import Github from '~/icons/github.svg';
 import Instagram from '~/icons/instagram.svg';
 import Linkedin from '~/icons/linkedin.svg';
-import Materialui from '~/icons/material-ui.svg';
-import MongoDb from '~/icons/mongodb.svg';
+import MaterialUi from '~/icons/material-ui.svg';
 import NextJs from '~/icons/nextjs.svg';
+import TailwindCss from '~/icons/tailwindcss.svg';
 import Twitter from '~/icons/twitter.svg';
-import TYpescript from '~/icons/typescript.svg';
+import Typescript from '~/icons/typescript.svg';
 
-import UnstyledLink from '../links/UnstyledLink';
+import UnStyledLink from '../links/UnStyledLink';
 
-const socialData: DevDataTypes = devData;
 const usedTech: readonly { name: string; Icon: SVGImageData }[] = [
   { name: 'NextJs', Icon: NextJs },
-  { name: 'TYpescript', Icon: TYpescript },
-  { name: 'Materialui', Icon: Materialui },
-  { name: 'MongoDb', Icon: MongoDb },
+  { name: 'Typescript', Icon: Typescript },
+  { name: 'MaterialUi', Icon: MaterialUi },
+  { name: 'TailwindCss', Icon: TailwindCss },
+  // { name: 'MongoDb', Icon: MongoDb },
 ];
+
 interface ISocialStacks {
   name: string;
   Icon: SVGImageData;
@@ -62,7 +63,7 @@ export default function Footer() {
     <FooterSection className='w-full bg-primary-100 px-2 pt-8 pb-4'>
       <Stack className='flex items-center gap-4'>
         <Typography className='text-lg font-[500] leading-3' component='h3'>
-          Faouzi Mohamed - {new Date().getFullYear()}
+          Faouzi Mohamed - 2022
         </Typography>
         <Stack className='flex-row gap-4'>
           <Typography className='font-primary font-[300]'>
@@ -82,9 +83,9 @@ export default function Footer() {
         </Stack>
         <Stack className='flex-row gap-4'>
           {SocialsStack.map(({ Icon, name, link }) => (
-            <UnstyledLink key={name} href={link}>
+            <UnStyledLink key={name} href={link}>
               <Icon className='h-5 w-5' />
-            </UnstyledLink>
+            </UnStyledLink>
           ))}
         </Stack>
       </Stack>

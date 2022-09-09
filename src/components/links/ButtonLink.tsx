@@ -3,9 +3,9 @@ import { forwardRef } from 'react';
 
 import clsxm from '@/lib/clsxm';
 
-import UnstyledLink, {
-  UnstyledLinkProps,
-} from '@/components/links/UnstyledLink';
+import UnStyledLink, {
+  UnStyledLinkProps,
+} from '@/components/links/UnStyledLink';
 
 enum ButtonVariant {
   'primary',
@@ -18,7 +18,7 @@ enum ButtonVariant {
 type ButtonLinkProps = {
   isDarkBg?: boolean;
   variant?: keyof typeof ButtonVariant;
-} & UnstyledLinkProps;
+} & UnStyledLinkProps;
 
 const ButtonLink = forwardRef<HTMLAnchorElement, ButtonLinkProps>(
   (
@@ -26,7 +26,7 @@ const ButtonLink = forwardRef<HTMLAnchorElement, ButtonLinkProps>(
     ref,
   ) => {
     return (
-      <UnstyledLink
+      <UnStyledLink
         ref={ref}
         {...rest}
         className={clsxm(
@@ -75,7 +75,7 @@ const ButtonLink = forwardRef<HTMLAnchorElement, ButtonLinkProps>(
         )}
       >
         {children}
-      </UnstyledLink>
+      </UnStyledLink>
     );
   },
 );
