@@ -22,6 +22,6 @@
     "incremental": true
   },
   "include": ["custom-next-env.d.ts", "jest.setup.js", "**/*.ts", "**/*.tsx"],
-  "exclude": ["next-env.d.ts", "node_modules"],
+  "exclude": ["next-env.d.ts", "node_modules", "next.config.js"],
   "moduleResolution": ["node_modules", ".next", "node"]
 }
