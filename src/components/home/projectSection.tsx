@@ -11,21 +11,22 @@ interface IProjectSectionProps {
 
 export default function ProjectSection({ project }: IProjectSectionProps) {
   return (
-    <Box>
+    <Box className='border-b pb-2 last:border-0'>
       <Box className='flex flex-wrap items-center gap-1'>
         <Typography variant='h4' className='inline text-sm font-bold'>
-          {project.Name} {project.Summary && ', '}
+          {project.Name}
+          {project.Link && (
+            <UnStyledLink href={project.Link}>
+              <IconButton size='small'>
+                <TbExternalLink />
+              </IconButton>
+            </UnStyledLink>
+          )}
+          {project.Summary && ', '}
         </Typography>
         <Typography variant='body2' className='inline text-sm'>
           {project.Summary}
         </Typography>
-        {project.Link && (
-          <UnStyledLink href={project.Link}>
-            <IconButton size='small'>
-              <TbExternalLink />
-            </IconButton>
-          </UnStyledLink>
-        )}
       </Box>
       <Typography variant='body2' className='text-sm'>
         {project.StartDate} {' - '}{' '}

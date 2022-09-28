@@ -93,7 +93,7 @@ function ShowListItemWithIcon({
 
 function SubTaskDetails({ subTask }: { subTask: ISubTask }) {
   return (
-    <List className='p-0 pl-2'>
+    <List className='w-full p-0 pl-2'>
       {subTask.SubTaskDetails.map((subSubTask) => (
         <ListItem key={subSubTask} className='p-0'>
           <ShowListItemWithIcon
@@ -109,7 +109,7 @@ function SubTaskDetails({ subTask }: { subTask: ISubTask }) {
 
 function SubTask({ task }: { task: ITask }) {
   return (
-    <List className='p-0  pl-2'>
+    <List className='w-full p-0 pl-2'>
       {task.SubTasks.map((subTask) => (
         <ListItem key={subTask.SubTask} className='flex flex-col p-0'>
           <ShowListItemWithIcon

@@ -28,6 +28,7 @@ const sectionsData: ISectionData = {
         'Asp.Net Core',
         'ExpressJs',
         'NextJs',
+        'Blazor Web Assembly',
         'ReactJs',
         'Bootstrap',
         'PyQt5',
