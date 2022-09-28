@@ -28,10 +28,20 @@ export interface ICertification {
   Title: string;
 }
 
+export interface ISubTask {
+  SubTask: string;
+  SubTaskDetails: string[];
+}
+
+export interface ITask {
+  Task: string;
+  SubTasks: ISubTask[];
+}
+
 export interface IExperience {
   Company: string;
   CompanyLink?: string;
-  Description: { Tasks: string[]; Title: string; Technologies: string[] };
+  Description: { Tasks: ITask[]; Title: string; Technologies: string[] };
   city: string;
   Title: string;
   Country: string;

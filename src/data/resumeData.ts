@@ -10,7 +10,7 @@ import {
 export const profileData: IProfile = {
   Title: 'Profile',
   Description:
-    "I am a fresh graduate student on the Master of Software Engineering for the Cloud, interested in JavaScript ecosystem and Frontend enthusiast. I'm also interested Dot Net platform and software development.",
+    "I have a Master's degree in Software Engineering for the Cloud, interested in JavaScript ecosystem and Frontend enthusiast. I'm also interested Dot Net platform and software development.",
 };
 
 export const educationData: IEducation = {
@@ -96,9 +96,63 @@ export const professionalExperienceData: IProfessionalExperience = {
           'OSLC',
         ],
         Tasks: [
-          'Integration with IBM Rational DOORS',
-          'Optimization of the export process',
-          'Creation of a command line application and web server for exporting requirements',
+          {
+            Task: 'Integration with IBM Rational DOORS',
+            SubTasks: [
+              {
+                SubTask:
+                  'Usage of dxl script along with IBM rational doors to extends built-in functionalities of DOORS',
+                SubTaskDetails: [],
+              },
+              {
+                SubTask:
+                  'Improve interoperability between DOORS and Internal tools at Lear',
+                SubTaskDetails: [],
+              },
+            ],
+          },
+
+          {
+            Task: 'Optimization of the export process',
+            SubTasks: [
+              {
+                SubTask:
+                  'Improve performances in the existing export process by using newer strategies, better memory management of DXL script and using more lower-level functionalities for better control of the execution.',
+                SubTaskDetails: [],
+              },
+              {
+                SubTask:
+                  'Reduce higher memory usage on the export and allowing parallel export (reduction of export time)',
+                SubTaskDetails: [],
+              },
+              {
+                SubTask:
+                  'Usage of a cache mechanism to reduce drastically the export’s execution time, with SQL server as cache database:',
+                SubTaskDetails: [
+                  'Allowing to export only newer or updated requirements',
+                  'Allowing to Resume export',
+                  'Reduce unnecessary export',
+                  'etc.',
+                ],
+              },
+            ],
+          },
+          {
+            Task: 'Migration of the existing library to Dotnet 6',
+            SubTasks: [],
+          },
+          {
+            Task: 'Exposing usable API for a later use (in a Command Line Interface) or for a web server (REST API, mvc, …)',
+            SubTasks: [],
+          },
+          {
+            Task: 'Creation of a Command-Line Application (CLI) and web server for exporting requirements',
+            SubTasks: [],
+          },
+          {
+            Task: 'Scheduling export process in windows server to run automatically and periodically in a specified date time.',
+            SubTasks: [],
+          },
         ],
       },
     },
@@ -108,6 +162,21 @@ export const professionalExperienceData: IProfessionalExperience = {
 export const projectData: IProject = {
   Title: 'Projects',
   ProjectDetails: [
+    {
+      Name: 'Leave Management System',
+      Summary:
+        'A fullstack project made with Blazor WASM and ASP.Net Core allowing employees to make leave requests. The admins will be able to accept or refuse the requests.',
+      Description: '',
+      StartDate: '09/2021',
+      EndDate: '09/2021',
+      Link: 'https://github.com/faouziMohamed/LeaveManagement',
+      Technologies: [
+        'C#',
+        'ASP.Net Core',
+        'Blazor Web Assembly',
+        'Bootstrap 5',
+      ],
+    },
     {
       Name: 'Taradjam',
       Summary: 'A platform for creating diplome from one language to another.',
