@@ -1,23 +1,25 @@
 import { Box, Stack, Typography } from '@mui/material';
 
-import sectionsData, { ISubSectionData } from '@/data/sectionsData';
+import skillsAndAbilities, {
+  ISubSectionData,
+} from '@/data/resumeData/skillsAndAbilities';
 
 import SectionTitle from '@/components/home/SectionTitle';
 
 import { camelCaseToTitleCase } from '@/utils/utils';
 
 export default function DetailsSections() {
-  const keys = Object.keys(sectionsData);
+  const keys = Object.keys(skillsAndAbilities);
   return (
     <Box>
       {keys.map((sectionTitle) => (
         <Stack key={sectionTitle} className='gap-2'>
           <SectionTitle
             title={camelCaseToTitleCase(sectionTitle)}
-            Icon={sectionsData[sectionTitle].Icon}
+            Icon={skillsAndAbilities[sectionTitle].Icon}
           />
           <CreateSubSections
-            subsections={sectionsData[sectionTitle].subsections}
+            subsections={skillsAndAbilities[sectionTitle].subsections}
           />
         </Stack>
       ))}

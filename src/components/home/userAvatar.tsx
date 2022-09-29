@@ -2,7 +2,7 @@ import { Box } from '@mui/material';
 
 import NextImage from '@/components/NextImage';
 
-import devImg from '~/images/devPicture.jpeg';
+import userProfileAvatar from '~/images/devPicture.jpeg';
 
 export default function UserAvatar() {
   return (
@@ -13,7 +13,7 @@ export default function UserAvatar() {
       <NextImage
         imgClassName='h-full w-full rounded-full object-cover'
         alt='developer picture'
-        src={devImg}
+        src={userProfileAvatar}
         layout='fill'
       />
     </Box>

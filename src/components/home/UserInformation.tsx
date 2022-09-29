@@ -10,22 +10,26 @@ import {
 
 import UnStyledLink from '@/components/links/UnStyledLink';
 
-import { IUserData } from '@/@types/data';
+import type { IUserContactsAndProfileData } from '@/@types/data';
 
-export default function UserInformation({ data }: { data: IUserData }) {
+interface IUserInformationProps {
+  data: IUserContactsAndProfileData;
+}
+
+export default function UserInformation({ data }: IUserInformationProps) {
   const { About, Location } = data;
   const { FirstName, LastName, Profession } = About;
   const { City, Country } = Location;
   const { Tel, Email, Linkedin, Github, Website } = data;
 
-  interface IData {
+  interface IUserInformation {
     Icon: IconType;
     Title: string;
     Link: string;
     Prefix?: string;
   }
 
-  const userdata: IData[] = [
+  const userInformation: IUserInformation[] = [
     { ...Tel, Icon: MdOutlineLocalPhone, Prefix: 'tel:' },
     { ...Email, Icon: MdEmail, Prefix: 'mailto:' },
     { ...Linkedin, Icon: AiFillLinkedin },
@@ -48,7 +52,7 @@ export default function UserInformation({ data }: { data: IUserData }) {
               {City}, {Country}
             </Typography>
           </Box>
-          {userdata.map((value) => (
+          {userInformation.map((value) => (
             <UnStyledLink
               className={`flex items-center gap-2  px-1 text-xs font-[500] `}
               key={value.Title}

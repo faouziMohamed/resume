@@ -8,7 +8,7 @@ import {
 } from 'react-icons/fa';
 import { RiContactsFill } from 'react-icons/ri';
 
-import data from '@/data/resumeData';
+import data from '@/data/resumeData/resumeMainData';
 
 import CertificationsSection from '@/components/home/certificationsSection';
 import DiplomaSection from '@/components/home/diplomaSection';
@@ -21,7 +21,6 @@ import UserInformation from '@/components/home/UserInformation';
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 
-import type { IUserData } from '@/@types/data';
 import {
   ICertification,
   IEducation,
@@ -30,9 +29,9 @@ import {
   IProject,
 } from '@/@types/resume.types';
 
-import userData from '../data/userData';
+import userInformation from '../data/resumeData/userIformationData';
 
-const UserData: IUserData = userData;
+// const userInformation: IUserContactsAndProfileData = userInformation;
 
 export default function HomePage() {
   const { Profile, Project, Certification } = data;
@@ -40,11 +39,11 @@ export default function HomePage() {
   return (
     <Layout>
       <Box className='flex flex-col gap-8 sm:flex-row sm:gap-1'>
-        <Seo title='Resume' />
+        <Seo title='Resume' theme='light' />
         <Box className='flex flex-col gap-6 bg-gray-800 p-2 py-8 text-white md:w-full md:max-w-md'>
           <Box className='flex flex-col items-center gap-4 py-16 sm:flex-col sm:justify-between md:flex-col'>
             <UserAvatar />
-            <UserInformation data={UserData} />
+            <UserInformation data={userInformation} />
           </Box>
           <DetailsSections />
         </Box>

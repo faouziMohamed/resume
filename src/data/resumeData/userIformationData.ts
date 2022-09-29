@@ -1,8 +1,10 @@
-const data = {
+import type { IUserContactsAndProfileData } from '@/@types/data';
+
+const userContactsAndProfileData: IUserContactsAndProfileData = {
   About: {
     FirstName: 'Faouzoudine',
     LastName: 'Mohamed Faouzi',
-    Profession: 'Student in Master of Software Engineering for the Cloud',
+    Profession: 'Full-stack software developer ReactJs • DotNet Core • Java',
   },
   Location: {
     City: 'Sale',
@@ -31,4 +33,4 @@ const data = {
   },
 };
 
-export default data;
+export default userContactsAndProfileData;

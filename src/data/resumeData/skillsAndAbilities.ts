@@ -1,9 +1,9 @@
-import { IconType } from 'react-icons';
+import type { IconType } from 'react-icons';
 import { GiHobbitDoor, GiNinjaHead, GiWorld } from 'react-icons/gi';
 
 export type ISubSectionData = { [key: string]: string[] };
 
-export interface ISectionData {
+export interface ISkillsAndAbilities {
   [key: string]: {
     Icon: IconType;
     title: string;
@@ -11,7 +11,7 @@ export interface ISectionData {
   };
 }
 
-const sectionsData: ISectionData = {
+const skillsAndAbilities: ISkillsAndAbilities = {
   Skills: {
     title: 'Skills',
     Icon: GiNinjaHead,
@@ -77,4 +77,4 @@ const sectionsData: ISectionData = {
   },
 };
 
-export default sectionsData;
+export default skillsAndAbilities;

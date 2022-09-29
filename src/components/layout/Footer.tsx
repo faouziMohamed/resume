@@ -1,6 +1,6 @@
 import { Box, Box as FooterSection, Stack, Typography } from '@mui/material';
 
-import socialData from '@/data/dev-data';
+import socialData from '@/data/resumeData/dev-data';
 
 import { SVGImageData } from '@/@types/data';
 

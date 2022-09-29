@@ -37,7 +37,7 @@ export interface Github {
   Link: string;
 }
 
-export interface IUserData {
+export interface IUserContactsAndProfileData {
   About: About;
   Location: Location;
   Tel: Tel;
