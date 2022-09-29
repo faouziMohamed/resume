@@ -20,6 +20,26 @@ following schema defined on typescript interfaces.
    and replace the files on [public/images/favicon](public/images/favicon)
    folder.
 
+### Run test to be sure your data is valid
+
+Before running run
+
+```bash
+yarn lint:fix
+yarn format:fix
+```
+
+Then run
+
+ ```bash
+ yarn lint:strict
+ yarn format:check
+ yarn typecheck
+ yarn test
+ ```
+
+If you have any error, fix it and run the test again.
+
 ### Building the resume
 
 1. Install nodejs, yarn and typescript on your machine

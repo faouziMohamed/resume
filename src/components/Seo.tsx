@@ -17,7 +17,7 @@ type SeoProps = {
   date?: string;
   templateTitle?: string;
   logo?: string;
-  theme: 'light' | 'dark';
+  theme?: 'light' | 'dark';
 } & Partial<SeoType>;
 
 export default function Seo(props: SeoProps) {
