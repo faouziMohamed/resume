@@ -31,8 +31,6 @@ import {
 
 import userInformation from '../data/resumeData/userIformationData';
 
-// const userInformation: IUserContactsAndProfileData = userInformation;
-
 export default function HomePage() {
   const { Profile, Project, Certification } = data;
   const { Education: education, ProfessionalExperience } = data;

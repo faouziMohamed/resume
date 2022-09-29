@@ -2,7 +2,7 @@ import { Box } from '@mui/material';
 
 import NextImage from '@/components/NextImage';
 
-import userProfileAvatar from '~/images/devPicture.jpeg';
+import userProfileAvatar from '~/images/userProfilePicture.jpeg';
 
 export default function UserAvatar() {
   return (
