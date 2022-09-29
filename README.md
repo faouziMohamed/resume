@@ -31,12 +31,12 @@ yarn format:fix
 
 Then run
 
- ```bash
- yarn lint:strict
- yarn format:check
- yarn typecheck
- yarn test
- ```
+```bash
+yarn lint:strict
+yarn format:check
+yarn typecheck
+yarn test
+```
 
 If you have any error, fix it and run the test again.
 
