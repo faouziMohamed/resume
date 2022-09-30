@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/faouziMohamed/fz-portfolio/compare/v0.1.5...v0.1.6) (2022-09-30)
+
+
+### Features
+
+* **theme:** add dark theme and dark theme switcher ([9fff3cd](https://github.com/faouziMohamed/fz-portfolio/commit/9fff3cd2da64f5baefa809d74ed935bb90562b30))
+
 ### [0.1.5](https://github.com/faouziMohamed/fz-portfolio/compare/v0.1.4...v0.1.5) (2022-09-30)
 
 ### 0.1.4 (2022-09-29)
