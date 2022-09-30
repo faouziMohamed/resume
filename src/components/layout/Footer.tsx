@@ -1,4 +1,5 @@
 import { Box, Box as FooterSection, Stack, Typography } from '@mui/material';
+import { useRouter } from 'next/router';
 
 import socialData from '@/data/resumeData/dev-data';
 
@@ -59,36 +60,41 @@ const SocialsStack: readonly ISocialStacks[] = [
 ];
 
 export default function Footer() {
+  const router = useRouter();
+  let themeName = '';
+  if (router.pathname === '/about') themeName = 'dark';
   return (
-    <FooterSection className='w-full bg-primary-100 px-2 pt-8 pb-4'>
-      <Stack className='flex items-center gap-4'>
-        <Typography className='text-lg font-[500] leading-3' component='h3'>
-          Faouzi Mohamed - 2022
-        </Typography>
-        <Stack className='flex-row gap-4'>
-          <Typography className='font-primary font-[300]'>
-            Built with:
+    <Box className={`${themeName} w-full p-0`}>
+      <FooterSection className='w-full bg-primary-100 px-2 pt-8 pb-4 dark:bg-slate-900 dark:text-gray-100'>
+        <Stack className='flex items-center gap-4'>
+          <Typography className='text-lg font-[500] leading-3' component='h3'>
+            Faouzi Mohamed - 2022
           </Typography>
-          <Stack className='flex flex-row gap-2'>
-            {usedTech.map(({ Icon, name }, index) => (
-              <Box
-                key={name}
-                className='flex items-center justify-center gap-2'
-              >
+          <Stack className='flex-row gap-4'>
+            <Typography className='font-primary font-[300]'>
+              Built with:
+            </Typography>
+            <Stack className='flex flex-row gap-2'>
+              {usedTech.map(({ Icon, name }, index) => (
+                <Box
+                  key={name}
+                  className='flex items-center justify-center gap-2'
+                >
+                  <Icon className='h-5 w-5' />
+                  {index + 1 < usedTech.length && <span>/</span>}
+                </Box>
+              ))}
+            </Stack>
+          </Stack>
+          <Stack className='flex-row gap-4'>
+            {SocialsStack.map(({ Icon, name, link }) => (
+              <UnStyledLink key={name} href={link}>
                 <Icon className='h-5 w-5' />
-                {index + 1 < usedTech.length && <span>/</span>}
-              </Box>
+              </UnStyledLink>
             ))}
           </Stack>
         </Stack>
-        <Stack className='flex-row gap-4'>
-          {SocialsStack.map(({ Icon, name, link }) => (
-            <UnStyledLink key={name} href={link}>
-              <Icon className='h-5 w-5' />
-            </UnStyledLink>
-          ))}
-        </Stack>
-      </Stack>
-    </FooterSection>
+      </FooterSection>
+    </Box>
   );
 }

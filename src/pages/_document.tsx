@@ -19,7 +19,7 @@ class MyDocument extends Document {
           {/* @ts-expect-error: attribute not existing */}
           {this.props.emotionStyleTags}
         </Head>
-        <body>
+        <body className='dark:bg-dark dark:text-gray-100'>
           <Main />
           <NextScript />
         </body>

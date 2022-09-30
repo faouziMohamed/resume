@@ -5,6 +5,7 @@ import {
   Stack,
   useMediaQuery,
 } from '@mui/material';
+import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { GoMarkGithub } from 'react-icons/go';
 import { IconType } from 'react-icons/lib';
@@ -51,26 +52,29 @@ const otherLinks = [
 ];
 
 export default function Header() {
-  const { theme: themeName } = useNextTheme();
+  let { theme: themeName } = useNextTheme();
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
+  const router = useRouter();
   if (!mounted) return null;
+
+  if (router.pathname === '/about') themeName = 'dark';
   return (
     <nav className='relative flex w-full flex-col px-4 text-dark '>
       <Stack
-        className={`flex w-full flex-row items-center justify-between gap-1.5 
+        className={`${themeName!} flex w-full flex-row items-center justify-between gap-1.5 
         sm:absolute sm:inset-0 sm:top-6 sm:bg-blue-200 sm:text-white`}
       >
         <NavigationMenu />
       </Stack>
-      <Box className='absolute inset-0 -top-1 -z-10 w-full '>
+      <Box className='xl:-top-22 absolute inset-0 -top-1 -z-10 w-full sm:-top-12 md:-top-16 lg:-top-[7rem] 2xl:-top-[8rem]'>
         <NextImage
           src={`/icons/header-blob-${themeName!}.svg`}
           alt='Header background blob'
           priority
           width='100'
           height='31'
-          className='relative w-full object-cover'
+          className='-sm:top-6 relative w-full  object-cover'
           layout='responsive'
         />
       </Box>
@@ -117,7 +121,7 @@ function ThemeToggleButton() {
     <IconButton
       size='small'
       onClick={updateTheme}
-      className='text-cyan-200 dark:text-yellow-400 sm:text-cyan-800'
+      className='text-gray-50 dark:text-yellow-400 sm:text-cyan-800'
     >
       {themeName === 'dark' ? (
         <MdWbSunny fontSize='1.9rem' tabIndex={0} />
