@@ -18,7 +18,7 @@
     "faouziMohamed",
     "personal"
   ],
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -26,7 +26,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:fix": "eslint src --fix && yarn format",
+    "lint:fix": "eslint src --fix && yarn format:fix",
     "lint:strict": "eslint --max-warnings=0 src",
     "typecheck": "tsc --noEmit --incremental false",
     "test:watch": "jest --watch",
@@ -55,6 +55,7 @@
     "next": "^12.3.0",
     "next-connect": "^0.13.0",
     "next-secure-headers": "^2.2.0",
+    "next-themes": "^0.2.1",
     "octokit": "^2.0.7",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
