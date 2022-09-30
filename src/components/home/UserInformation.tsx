@@ -37,7 +37,7 @@ export default function UserInformation({ data }: IUserInformationProps) {
     { ...Website, Icon: MdLanguage },
   ];
   return (
-    <Box className='flex flex-col items-center justify-center gap-4 text-center msm:items-start'>
+    <Box className='flex flex-col items-center justify-center gap-4 text-center  msm:items-start'>
       <Typography variant='h1' className='text-3xl font-bold'>
         {FirstName} {LastName}
       </Typography>

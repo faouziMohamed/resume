@@ -14,13 +14,6 @@ class MyDocument extends Document {
       <Html lang='en' className='scroll-smooth'>
         <Head>
           <meta name='theme-color' content={theme.palette.primary.main} />
-          <link
-            rel='preload'
-            href='/fonts/inter-var-latin.woff2'
-            as='font'
-            type='font/woff2'
-            crossOrigin='anonymous'
-          />
           <meta charSet='UTF-8' />
           <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
           {/* @ts-expect-error: attribute not existing */}

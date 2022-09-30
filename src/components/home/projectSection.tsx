@@ -17,7 +17,7 @@ export default function ProjectSection({ project }: IProjectSectionProps) {
           {project.Name}
           {project.Link && (
             <UnStyledLink href={project.Link}>
-              <IconButton size='small'>
+              <IconButton size='small' className='dark:text-gray-100'>
                 <TbExternalLink />
               </IconButton>
             </UnStyledLink>

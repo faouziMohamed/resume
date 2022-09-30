@@ -36,9 +36,9 @@ export default function HomePage() {
   const { Education: education, ProfessionalExperience } = data;
   return (
     <Layout>
-      <Box className='flex flex-col gap-8 sm:flex-row sm:gap-1'>
+      <Box className='flex flex-col gap-8 bg-transparent sm:flex-row sm:gap-1'>
         <Seo title='Resume' theme='light' />
-        <Box className='flex flex-col gap-6 bg-gray-800 p-2 py-8 text-white md:w-full md:max-w-md'>
+        <Box className='flex flex-col gap-6 bg-gray-800 p-2 py-8 text-white dark:bg-dark-400 md:w-full md:max-w-md'>
           <Box className='flex flex-col items-center gap-4 py-16 sm:flex-col sm:justify-between md:flex-col'>
             <UserAvatar />
             <UserInformation data={userInformation} />
@@ -63,7 +63,7 @@ function ResumeSectionTitle(props: { title: string; Icon: IconType }) {
     <SectionTitle
       title={title}
       Icon={Icon}
-      className='border-b-[7px] border-gray-800'
+      className='border-b-[7px] border-gray-800 dark:border-gray-200'
     />
   );
 }

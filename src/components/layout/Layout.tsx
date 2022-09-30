@@ -16,9 +16,9 @@ interface LayoutProps {
 }
 
 export default function Layout({ children, className = '' }: LayoutProps) {
-  const isBuilding = process.env.NEXT_PUBLIC_ISBUILDING === 'true';
+  const isBuilding = process.env.NEXT_PUBLIC_ISBUILDING !== 'true';
   return (
-    <MainContainer className='z-10 flex w-full flex-col bg-app p-0'>
+    <MainContainer className='relative z-50 flex w-full flex-col p-0  dark:bg-dark dark:text-gray-100 '>
       {isBuilding && <UnderConstructionBanner />}
       <SiteContent className={`p-0 ${className}`}>
         <Header />
@@ -31,7 +31,7 @@ export default function Layout({ children, className = '' }: LayoutProps) {
 
 function UnderConstructionBanner() {
   return (
-    <AlertBanner className='z-10 flex w-full items-center justify-center bg-primary-100 py-1'>
+    <AlertBanner className='z-10 flex w-full items-center justify-center bg-primary-100 py-1 dark:bg-gray-900'>
       <Stack className='flex-row items-center gap-2 text-primary-600'>
         <RiMagicFill className='animate-bounce fill-orange-500' />
         <Typography className='font-primary font-[400]'>

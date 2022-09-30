@@ -22,7 +22,7 @@ export default function CertificationsSection(props: ICertificateSectionProps) {
           {certification.Institution}
         </Typography>
         <UnStyledLink href={certification.Link} className='inline'>
-          <IconButton size='small'>
+          <IconButton size='small' className='dark:text-gray-100'>
             <TbExternalLink />
           </IconButton>
         </UnStyledLink>

@@ -20,6 +20,7 @@ import '@/styles/globals.scss';
 import '@/styles/colors.scss';
 
 import theme from '@/themes/theme';
+import NextThemeProvider from '@/themes/themeContext';
 import createEmotionCache from '@/utils/createEmotionCache';
 
 interface MyAppProps extends AppProps {
@@ -42,10 +43,12 @@ export default function MyApp(props: MyAppProps) {
         <meta name='viewport' content='initial-scale=1, width=device-width' />
       </Head>
       <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <CssBaseline />
-        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-        <Component {...pageProps} />
+        <NextThemeProvider>
+          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+          <CssBaseline />
+          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+          <Component {...pageProps} />
+        </NextThemeProvider>
       </ThemeProvider>
     </CacheProvider>
   );

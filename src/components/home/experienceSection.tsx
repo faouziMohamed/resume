@@ -32,7 +32,7 @@ export default function ExperienceSection(props: IExperienceSectionProps) {
         </Typography>
         {experience.CompanyLink && (
           <UnStyledLink href={experience.CompanyLink}>
-            <IconButton size='small'>
+            <IconButton size='small' className='dark:text-gray-100'>
               <TbExternalLink />
             </IconButton>
           </UnStyledLink>
