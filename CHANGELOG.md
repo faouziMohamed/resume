@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/faouziMohamed/fz-portfolio/compare/v0.1.6...v2.0.0) (2022-09-30)
+
 ### [0.1.6](https://github.com/faouziMohamed/fz-portfolio/compare/v0.1.5...v0.1.6) (2022-09-30)
 
 

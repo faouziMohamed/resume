@@ -7,6 +7,7 @@ module.exports = {
       2,
       'always',
       [
+        'prod',
         'feat',
         'fix',
         'docs',
@@ -17,8 +18,8 @@ module.exports = {
         'test',
         'perf',
         'revert',
-        'vercel',
-      ],
-    ],
-  },
+        'vercel'
+      ]
+    ]
+  }
 };
