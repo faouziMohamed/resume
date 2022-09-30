@@ -16,7 +16,7 @@ interface LayoutProps {
 }
 
 export default function Layout({ children, className = '' }: LayoutProps) {
-  const isBuilding = process.env.NEXT_PUBLIC_ISBUILDING !== 'true';
+  const isBuilding = process.env.NEXT_PUBLIC_ISBUILDING === 'true';
   return (
     <MainContainer className='relative z-50 flex w-full flex-col p-0  dark:bg-dark dark:text-gray-100 '>
       {isBuilding && <UnderConstructionBanner />}

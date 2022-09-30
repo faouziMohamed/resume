@@ -5,7 +5,8 @@ export type ThemeMode = 'light' | 'dark';
 
 export function useNextTheme() {
   const returns = useTheme();
-  const { theme, setTheme } = returns;
+  let { theme } = returns;
+  const { setTheme } = returns;
   const updateTheme = useCallback(() => {
     setTheme(theme === 'light' ? 'dark' : 'light');
     return theme;
@@ -19,7 +20,12 @@ export function useNextTheme() {
     setTheme('light');
     return 'light';
   }, [setTheme]);
-
+  if (theme === 'system') {
+    theme = matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light';
+    setTheme(theme);
+  }
   return { ...returns, updateTheme, setDarkTheme, setLightTheme };
 }
 

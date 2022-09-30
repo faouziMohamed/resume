@@ -24,8 +24,6 @@ import NextImage from '@/components/NextImage';
 
 import { useNextTheme } from '@/themes/themeContext';
 
-// import { useTheme } from '@/themes/themeContext';
-
 interface INavLinks {
   name: string;
   href: string;
@@ -58,7 +56,7 @@ export default function Header() {
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
   return (
-    <nav className='relative flex w-full flex-col  px-4 text-dark '>
+    <nav className='relative flex w-full flex-col px-4 text-dark '>
       <Stack
         className={`flex w-full flex-row items-center justify-between gap-1.5 
         sm:absolute sm:inset-0 sm:top-6 sm:bg-blue-200 sm:text-white`}
@@ -86,7 +84,7 @@ function NavigationMenu() {
   const position = isSM ? 'relative' : 'absolute';
   return (
     <Box
-      className={`${position} inset-0 z-30 h-fit w-full select-none bg-gray-800 bg-transparent p-0 text-white 
+      className={`${position} bg-grays-800 inset-0 z-30 h-fit w-full select-none bg-transparent p-0 text-white 
       sm:flex sm:w-fit sm:grow sm:flex-row-reverse sm:justify-start`}
     >
       <Box
